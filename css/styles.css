@@ -1,172 +1,157 @@
 /* ============ COMMON STYLES ============ */
-.hidden {
-  display: none;
+* {
+  box-sizing: border-box;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
+:root {
+  --main-bg-color: #1c1d20;
+  --content-bg-color: #242527;
+  --arrow-color: #3b3b3b;
+  --flame-red-color: #ed3b44;
+  --main-text-color: #fafafa;
 }
 
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-a {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 body {
-  font-family: "Inter", sans-serif;
+  background-color: var(--main-bg-color);
+  font-family: "Inter Tight", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  color: #000;
-  background-color: #fff;
+  letter-spacing: -0.02em;
+  color: var(--main-text-color);
 }
-.section-paddings {
-  padding-top: 120px;
-  padding-bottom: 120px;
+/* h1, h2 COMMON STYLES */
+h1,
+h2 {
+  font-weight: 600;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-/* ============ CONTAINER ============ */
-.container {
-  max-width: 320px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 736px;
-    padding: 0 16px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .container {
-    min-width: 1280px;
-  }
-}
-
-/* ============ ABOUT US ============ */
-
-.aboutus-section {
-  background-image: url(/images/aboutus/about-elements-mob@1x.png);
-  background-size: 240px 284px;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-color: #1c2225;
-  padding-top: 80px;
-  padding-bottom: 62px;
-}
-.aboutus-container {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 50px;
-  margin: 0 auto;
-}
-.aboutus-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.aboutus-section-title {
-  font-family: "Manrope", sans-serif;
-  font-weight: 500;
-  font-size: 44px;
-  line-height: 1.45;
-  letter-spacing: -0.03em;
-  color: #fcf9f9;
-  text-transform: capitalize;
-}
-
-.aboutus-section-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.aboutus-description {
-  font-family: "Manrope", sans-serif;
-  font-weight: 400;
+/* h1 - styles */
+h1 {
   font-size: 16px;
-  letter-spacing: -0.04em;
-  line-height: normal;
-  letter-spacing: -0.64px;
-  font-style: normal;
-  color: #fcf9f966;
-  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
 }
-.aboutus-image {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0;
-  position: relative;
-  border-radius: 4px;
-  width: 355px;
-  height: auto;
+/* h2 - styles */
+h2 {
+  font-size: 20px;
 }
+
+/* ============ CONTAINER ============ */
+/* Styles for Mobile devices */
+.container {
+  max-width: 375px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+/* ============ BENEFITS ============ */
+.benefits-section {
+  max-width: 375px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.benefits-section-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+.benefits-cards-conteiner {
+  margin-bottom: 32px;
+}
+.benefits-list {
+  list-style: none;
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefits-cards {
+  border-radius: 20px;
+  padding: 24px;
+  width: 344px;
+  height: 270px;
+}
+
+.benefits-item {
+  border-radius: 20px;
+  padding: 24px;
+  width: 344px;
+  height: 270px;
+  background: #242527;
+}
+
+.benefits-icons-frame {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: #ed3b44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-item-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin-top: 64px;
+}
+.benefits-item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  margin-top: 8px;
+}
+.benefits-btn {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 18px 36px;
+  width: 187px;
+  height: 55px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
-  .aboutus-section {
-    background-image: url(/images/aboutus/about-elements-tab@1x.png);
-    background-size: 335px 484px;
-    padding-top: 100px;
-    padding-bottom: 50px;
-  }
-  .aboutus-container {
-    gap: 40px;
-  }
-  .aboutus-image {
+  .benefits-container {
     width: 704px;
-    height: 545px;
+    height: 731px;
+  }
+  .benefits-list {
+    list-style: none;
+    gap: 16px;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-cards-conteiner {
+    margin-bottom: 64px;
   }
 }
-@media screen and (min-width: 1280px) {
-  .aboutus-section {
-    background-image: url(/images/aboutus/about-elements-desk@1x.png);
-    background-size: 340px 384px;
-    padding-top: 150px;
-    padding-bottom: 80px;
-  }
-  .aboutus-container {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-  }
-  .aboutus-image {
-    margin-top: auto;
-    max-width: 594px;
-    max-height: 545px;
-  }
+
+@media screen and (min-width: 1440px) {
 }
